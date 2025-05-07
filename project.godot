@@ -11,6 +11,6 @@ config_version=5
 [application]
 
 config/name="que es un panda"
-run/main_scene="res://Jam-espagne/Scene/Game.tscn"
+run/main_scene="res://Scene/Game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
