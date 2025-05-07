@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://c16xigal6ndq6"]
+
+[ext_resource type="Script" path="res://Jam-espagne/Scripts/player.gd" id="1_2invf"]
+[ext_resource type="Texture2D" uid="uid://cenkdgm0c8ja8" path="res://Jam-espagne/Assets/Sprite/Panda/White bear panda SIT 1.png" id="2_ijnvj"]
+[ext_resource type="Texture2D" uid="uid://cyvre6t7vsojm" path="res://Jam-espagne/Assets/Sprite/Panda/White bear panda SIT 2.png" id="3_dn7yw"]
+[ext_resource type="Texture2D" uid="uid://dxaymteeofsnx" path="res://Jam-espagne/Assets/Sprite/Panda/White bear panda run FRAME 4.png" id="4_eglpm"]
+[ext_resource type="Texture2D" uid="uid://btn8tqx8ma6id" path="res://Jam-espagne/Assets/Sprite/Panda/White bear panda run FRAME 1.png" id="5_dkr4i"]
+[ext_resource type="Texture2D" uid="uid://cf88f3kmuwwxc" path="res://Jam-espagne/Assets/Sprite/Panda/White bear panda run FRAME 2.png" id="6_fxagy"]
+[ext_resource type="Texture2D" uid="uid://dflrid822tbvc" path="res://Jam-espagne/Assets/Sprite/Panda/White bear panda run FRAME 3.png" id="7_rsxe1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dijhb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ijnvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dn7yw")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_eglpm")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_dkr4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fxagy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rsxe1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eglpm")
+}],
+"loop": true,
+"name": &"Move",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sqj24"]
+radius = 120.017
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_2invf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -142)
+sprite_frames = SubResource("SpriteFrames_dijhb")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.546498
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18, -132)
+shape = SubResource("CircleShape2D_sqj24")
