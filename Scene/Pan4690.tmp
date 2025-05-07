@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk01g52ncjqmk"]
+
+[ext_resource type="Script" path="res://Panda_NPC.gd" id="1_ltbuy"]
+[ext_resource type="Texture2D" uid="uid://bm0e1ngur5gy3" path="res://Assets/Sprite/Panda/SPRITE REGULAR PANDA NEUTRAL.png" id="2_8mqnj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_verxv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8mqnj")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcdq5"]
+size = Vector2(265, 86)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_ltbuy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_verxv")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Chat_Detection_Area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chat_Detection_Area"]
+position = Vector2(0.5, 7)
+shape = SubResource("RectangleShape2D_bcdq5")
+
+[node name="DialogBox" type="Node" parent="."]
+
+[node name="Text" type="RichTextLabel" parent="DialogBox"]
+offset_left = 47.0
+offset_top = -88.0
+offset_right = 170.0
+offset_bottom = -48.0
+text = "lorem ipsum"
+
+[connection signal="body_entered" from="Chat_Detection_Area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="Chat_Detection_Area" to="." method="_on_chat_detection_area_body_exited"]
