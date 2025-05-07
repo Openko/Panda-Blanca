@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://rg6uc0cwmrj5"]
+[gd_scene load_steps=5 format=3 uid="uid://rg6uc0cwmrj5"]
 
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_eje4o"]
 [ext_resource type="PackedScene" uid="uid://c16xigal6ndq6" path="res://Scene/player.tscn" id="1_oc6gu"]
+[ext_resource type="PackedScene" uid="uid://cnyiyl1qe16yo" path="res://Scene/music.tscn" id="2_8rs7v"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_m84ql"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_eje4o")
 
 [node name="Player" parent="." instance=ExtResource("1_oc6gu")]
 
@@ -15,3 +18,5 @@
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(3, 13)
 shape = SubResource("WorldBoundaryShape2D_m84ql")
+
+[node name="Music" parent="." instance=ExtResource("2_8rs7v")]
