@@ -1,12 +1,4 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[gd_scene load_steps=30 format=3 uid="uid://rg6uc0cwmrj5"]
-=======
 [gd_scene load_steps=49 format=3 uid="uid://rg6uc0cwmrj5"]
->>>>>>> Stashed changes
-=======
-[gd_scene load_steps=49 format=3 uid="uid://rg6uc0cwmrj5"]
->>>>>>> Stashed changes
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_hij24"]
 [ext_resource type="PackedScene" uid="uid://c16xigal6ndq6" path="res://Scene/player.tscn" id="1_oc6gu"]
@@ -46,21 +38,11 @@
 [ext_resource type="Texture2D" uid="uid://ckm3u1h1myuu1" path="res://Assets/Sprite/Map/rock_2.png" id="20_ifbwv"]
 [ext_resource type="Texture2D" uid="uid://ckg1u1yjo5hyi" path="res://Assets/Sprite/Map/WF/2.png" id="20_ka8lo"]
 [ext_resource type="Texture2D" uid="uid://4wh6gcwbbxgy" path="res://Assets/Sprite/Map/WF/1.png" id="21_cucbi"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[ext_resource type="Script" path="res://Scripts/music.gd" id="22_aqiva"]
-=======
-=======
->>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://c6dblpvlp42eu" path="res://Assets/Sprite/Map/rock_3.png" id="21_qo8pa"]
 [ext_resource type="Texture2D" uid="uid://ds2eux0u4os15" path="res://Assets/Sprite/Map/Tree_1.png" id="22_dhhrw"]
 [ext_resource type="Texture2D" uid="uid://4a5q3q0geoxm" path="res://Assets/Sprite/Map/Tree_2.png" id="23_wqlny"]
 [ext_resource type="Texture2D" uid="uid://bte8b5hwnlgtb" path="res://Assets/Sprite/Map/Fleur_Violet.png" id="25_4ftwj"]
 [ext_resource type="Texture2D" uid="uid://bw27ic7wtmtv6" path="res://Assets/Sprite/Panda/FLAQUE PETROLE ILLU.png" id="43_dw58n"]
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_il17t"]
 texture = ExtResource("5_1v8g1")
@@ -148,9 +130,6 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eof2h"]
 size = Vector2(325.354, 22)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vmyg"]
-size = Vector2(9811, 2444)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_hij24")
@@ -498,6 +477,8 @@ position = Vector2(6477, -296)
 [node name="GROSPANDA4" parent="Pandas" instance=ExtResource("5_kun5b")]
 position = Vector2(7632, -313)
 
+[node name="Music" parent="." instance=ExtResource("4_jqnh2")]
+
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(0.2, 0.2)
 tile_set = SubResource("TileSet_wfbi1")
@@ -522,19 +503,8 @@ texture = ExtResource("6_mhbva")
 position = Vector2(2.55762, 241)
 shape = SubResource("RectangleShape2D_eof2h")
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_oc6gu")]
-unique_name_in_owner = true
-position = Vector2(12736, -1973)
-=======
 [node name="Player" parent="." instance=ExtResource("1_oc6gu")]
 position = Vector2(-51, -4)
->>>>>>> Stashed changes
-=======
-[node name="Player" parent="." instance=ExtResource("1_oc6gu")]
-position = Vector2(-51, -4)
->>>>>>> Stashed changes
 scale = Vector2(0.25, 0.25)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -542,22 +512,6 @@ position = Vector2(-105, -1700)
 scale = Vector2(5, 5)
 zoom = Vector2(0.6, 0.6)
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[node name="Music_Area" type="Node2D" parent="."]
-script = ExtResource("22_aqiva")
-
-[node name="Music" parent="Music_Area" instance=ExtResource("4_jqnh2")]
-unique_name_in_owner = true
-
-[node name="Area2D" type="Area2D" parent="Music_Area"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Music_Area/Area2D"]
-position = Vector2(2941.5, -1220)
-shape = SubResource("RectangleShape2D_8vmyg")
-=======
-=======
->>>>>>> Stashed changes
 [node name="PandaIllustration1Départ" type="Sprite2D" parent="Player"]
 visible = false
 position = Vector2(-172, -1680)
@@ -569,7 +523,3 @@ visible = false
 position = Vector2(44, -1528)
 scale = Vector2(11.01, 11.01)
 texture = ExtResource("43_dw58n")
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
