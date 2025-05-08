@@ -1,10 +1,5 @@
 extends CharacterBody2D
 
-signal MusicJungle
-signal MusicVillage 
-
-
-
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -850.0
@@ -50,14 +45,3 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-
-
-func _on_area_village_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
-	MusicVillage.emit()
-
-	pass # Replace with function body.
-
-
-func _on_area_jungle_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
-	MusicJungle.emit()
-	pass # Replace with function body.

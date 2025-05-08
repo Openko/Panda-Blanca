@@ -134,7 +134,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eof2h"]
-size = Vector2(325.354, 22)
+size = Vector2(240.66, 259.5)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_hij24")
@@ -151,6 +151,13 @@ scale = Vector2(5.41602, 5.13333)
 texture = ExtResource("2_l3qvr")
 
 [node name="Assets" type="Node2D" parent="."]
+
+[node name="Oil" type="Sprite2D" parent="Assets"]
+position = Vector2(16911, -2917)
+rotation = 0.23911
+scale = Vector2(0.921875, 0.498047)
+skew = 0.537561
+texture = ExtResource("45_suefp")
 
 [node name="Debut" type="Node2D" parent="Assets"]
 
@@ -521,7 +528,20 @@ scale = Vector2(1.56445, 1)
 texture = ExtResource("6_mhbva")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bridge"]
-position = Vector2(2.55762, 241)
+position = Vector2(2.55762, 360.75)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_eof2h")
+
+[node name="Bridge2" type="StaticBody2D" parent="."]
+position = Vector2(13110.5, -2183)
+scale = Vector2(1.56445, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bridge2"]
+texture = ExtResource("6_mhbva")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bridge2"]
+position = Vector2(-8591.99, 1927.5)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_eof2h")
 
 [node name="Player" parent="." instance=ExtResource("1_oc6gu")]
@@ -535,12 +555,14 @@ zoom = Vector2(0.6, 0.6)
 
 [node name="Illu1" type="Sprite2D" parent="Player"]
 visible = false
+z_index = 6
 position = Vector2(44, -1528)
 scale = Vector2(11.01, 11.01)
 texture = ExtResource("43_dw58n")
 
 [node name="Illu2" type="Sprite2D" parent="Player"]
 visible = false
+z_index = 5
 position = Vector2(-240, -1756)
 scale = Vector2(11.04, 11.04)
 texture = ExtResource("44_o6mq3")
@@ -548,13 +570,6 @@ texture = ExtResource("44_o6mq3")
 [node name="Node2D" parent="." instance=ExtResource("43_cxjyu")]
 position = Vector2(16599, -2915)
 scale = Vector2(0.25, 0.25)
-
-[node name="Oil" type="Sprite2D" parent="."]
-position = Vector2(16911, -2917)
-rotation = 0.23911
-scale = Vector2(0.921875, 0.498047)
-skew = 0.537561
-texture = ExtResource("45_suefp")
 
 [node name="Bambou" type="Sprite2D" parent="."]
 position = Vector2(16813, -3117)

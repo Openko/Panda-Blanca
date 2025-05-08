@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dj63rf6gwks2d"]
+[gd_scene load_steps=10 format=3 uid="uid://dj63rf6gwks2d"]
 
 [ext_resource type="Script" path="res://button_FR.gd" id="1_8pulh"]
 [ext_resource type="Script" path="res://Scene/Start.gd" id="1_a8ex5"]
@@ -6,6 +6,9 @@
 [ext_resource type="Theme" uid="uid://dsyox0uh4obxy" path="res://Scene/themeeee.tres" id="2_76ci5"]
 [ext_resource type="Script" path="res://button_CAT.gd" id="2_nqo1c"]
 [ext_resource type="Script" path="res://Scene/button_2.gd" id="3_bd7os"]
+[ext_resource type="Script" path="res://Scene/buttoncredits.gd" id="7_0y67x"]
+[ext_resource type="Texture2D" uid="uid://rywdc5s671in" path="res://Assets/Ensign_of_France.svg.png" id="8_ts3on"]
+[ext_resource type="Texture2D" uid="uid://d4c6ygk71a2vd" path="res://Assets/Estelada_blava.png" id="9_px36h"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -52,23 +55,43 @@ script = ExtResource("3_bd7os")
 
 [node name="Button3" type="Button" parent="ReferenceRect"]
 layout_mode = 0
-offset_left = 1393.0
-offset_top = 21.0
-offset_right = 1684.0
-offset_bottom = 82.0
+offset_left = 1438.0
+offset_top = 20.0
+offset_right = 1729.0
+offset_bottom = 81.0
 text = "Français"
 script = ExtResource("1_8pulh")
 
 [node name="Button4" type="Button" parent="ReferenceRect"]
 layout_mode = 0
-offset_left = 1394.0
-offset_top = 91.0
-offset_right = 1685.0
-offset_bottom = 152.0
+offset_left = 1440.0
+offset_top = 87.0
+offset_right = 1731.0
+offset_bottom = 148.0
 text = "Catalan"
 script = ExtResource("2_nqo1c")
+
+[node name="Credits" type="Button" parent="ReferenceRect"]
+layout_mode = 0
+offset_left = 1383.0
+offset_top = 993.0
+offset_right = 1735.0
+offset_bottom = 1070.0
+text = "Credits"
+script = ExtResource("7_0y67x")
+
+[node name="EnsignOfFrance_svg" type="Sprite2D" parent="ReferenceRect"]
+position = Vector2(1397, 48.625)
+scale = Vector2(0.312, 0.411677)
+texture = ExtResource("8_ts3on")
+
+[node name="EsteladaBlava" type="Sprite2D" parent="ReferenceRect"]
+position = Vector2(1396.5, 117.375)
+scale = Vector2(0.3, 0.35479)
+texture = ExtResource("9_px36h")
 
 [connection signal="pressed" from="ReferenceRect/Button" to="ReferenceRect/Button" method="_on_pressed"]
 [connection signal="pressed" from="ReferenceRect/Button2" to="ReferenceRect/Button2" method="_on_pressed"]
 [connection signal="pressed" from="ReferenceRect/Button3" to="ReferenceRect/Button3" method="_on_pressed"]
 [connection signal="pressed" from="ReferenceRect/Button4" to="ReferenceRect/Button4" method="_on_pressed"]
+[connection signal="pressed" from="ReferenceRect/Credits" to="ReferenceRect/Credits" method="_on_pressed"]
