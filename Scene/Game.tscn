@@ -1,9 +1,10 @@
-[gd_scene load_steps=53 format=3 uid="uid://rg6uc0cwmrj5"]
+[gd_scene load_steps=54 format=3 uid="uid://rg6uc0cwmrj5"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_hij24"]
 [ext_resource type="PackedScene" uid="uid://c16xigal6ndq6" path="res://Scene/player.tscn" id="1_oc6gu"]
 [ext_resource type="Texture2D" uid="uid://cvywo2ax4glgy" path="res://Assets/Sprite/Panda/Ciel panda blanco 2.png" id="2_l3qvr"]
 [ext_resource type="Texture2D" uid="uid://cn6kfrbtqojx0" path="res://Assets/Sprite/Map/Hutte_Bamboo.png" id="2_pthod"]
+[ext_resource type="Texture2D" uid="uid://cri3hjeirr5v8" path="res://Assets/Sprite/Panda/ciel & nuages.png" id="2_t0imk"]
 [ext_resource type="PackedScene" uid="uid://b2c7naxyxi4w2" path="res://Scene/music.tscn" id="4_jqnh2"]
 [ext_resource type="Texture2D" uid="uid://bdkfkfcpjvdo4" path="res://Assets/Sprite/Map/TileMapfeur.png" id="5_1v8g1"]
 [ext_resource type="PackedScene" uid="uid://bk01g52ncjqmk" path="res://Scene/Panda.tscn" id="5_kun5b"]
@@ -137,6 +138,11 @@ size = Vector2(325.354, 22)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_hij24")
+
+[node name="Ciel&Nuages" type="Sprite2D" parent="."]
+position = Vector2(8449.75, -1762)
+scale = Vector2(5.32201, 5.47407)
+texture = ExtResource("2_t0imk")
 
 [node name="CielPandaBlanco2" type="Sprite2D" parent="."]
 visible = false
