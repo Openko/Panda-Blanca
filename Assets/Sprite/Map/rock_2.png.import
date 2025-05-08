@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7hcx6p4g5yyx"
-path="res://.godot/imported/Ground_tileMap.png-767be57af16ea1582e6f8185058804c9.ctex"
+uid="uid://ckm3u1h1myuu1"
+path="res://.godot/imported/rock_2.png-7657b5d3a7b6816f99bc9dceccb18619.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Map/Ground_tileMap.png"
-dest_files=["res://.godot/imported/Ground_tileMap.png-767be57af16ea1582e6f8185058804c9.ctex"]
+source_file="res://Assets/Sprite/Map/rock_2.png"
+dest_files=["res://.godot/imported/rock_2.png-7657b5d3a7b6816f99bc9dceccb18619.ctex"]
 
 [params]
 

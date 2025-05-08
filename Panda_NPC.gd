@@ -2,8 +2,15 @@ extends CharacterBody2D
 
 var player
 var is_player_in_range = false
-@export var dialog_FR : String
-@export var dialog_CAT : String
+@export var dialog_FR_1 : String
+@export var dialog_FR_2 : String
+@export var dialog_FR_3 : String
+@export var dialog_CAT_1 : String
+@export var dialog_CAT_2 : String
+@export var dialog_CAT_3 : String
+@export var dialog_ENG_1 : String
+@export var dialog_ENG_2 : String
+@export var dialog_ENG_3 : String
 
 func _on_chat_detection_area_body_entered(body):
 	if body.get_name() == "Player":
@@ -19,10 +26,9 @@ func _on_chat_detection_area_body_exited(body):
 func _ready():
 	print()
 	if(Langue.id_lang == 0):
-
-		$DialogBox/Text.text = dialog_FR
+		$DialogBox/Text.text = dialog_FR_1
 	elif(Langue.id_lang == 1):
-		$DialogBox/Text.text = dialog_CAT
+		$DialogBox/Text.text = dialog_CAT_1
 	$DialogBox.visible = false
 
 func _process(delta):

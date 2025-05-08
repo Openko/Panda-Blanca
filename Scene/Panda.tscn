@@ -30,7 +30,6 @@ autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chat_Detection_Area"]
 position = Vector2(-1.25001, 36.25)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_bcdq5")
 
 [node name="DialogBox" type="Node2D" parent="."]

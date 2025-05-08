@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1y62xyvmqswo"
-path="res://.godot/imported/TIlemMAp_corrigé.png-1aa26f6bc1b8897bb626aa92c9c450c1.ctex"
+uid="uid://bd3mb44fwubhc"
+path="res://.godot/imported/Barrière.png-39d9157ff1a84ad30c15b0c14336709f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Map/TIlemMAp_corrigé.png"
-dest_files=["res://.godot/imported/TIlemMAp_corrigé.png-1aa26f6bc1b8897bb626aa92c9c450c1.ctex"]
+source_file="res://Assets/Sprite/Map/Barrière.png"
+dest_files=["res://.godot/imported/Barrière.png-39d9157ff1a84ad30c15b0c14336709f.ctex"]
 
 [params]
 
