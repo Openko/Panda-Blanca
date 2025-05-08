@@ -8,6 +8,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if Langue.id_lang == 0:
+		self.text = "Commencer"
+	if Langue.id_lang == 1:
+		self.text = "Començar"
 	pass
 
 

@@ -10,7 +10,10 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		animated_sprite_2D.play("Jump")
+		if Langue.game_step != 2:
+			animated_sprite_2D.play("Jump")
+		if Langue.game_step == 2:
+			animated_sprite_2D.play("Jump2")
 
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
@@ -26,11 +29,15 @@ func _physics_process(delta):
 	elif direction < 0:
 		animated_sprite_2D.flip_h = true
 		
-	if direction == 0 && is_on_floor():
+	if direction == 0 && is_on_floor() && Langue.game_step != 2:
 		animated_sprite_2D.play("Idle")
-	elif direction != 0 && is_on_floor():
+	elif direction != 0 && is_on_floor() && Langue.game_step != 2:
 		animated_sprite_2D.play("Move")
 	
+	if direction == 0 && is_on_floor() && Langue.game_step == 2:
+		animated_sprite_2D.play("Idle2")
+	elif direction != 0 && is_on_floor() && Langue.game_step == 2:
+		animated_sprite_2D.play("Move2")
 	
 	if direction:
 		velocity.x = direction * SPEED

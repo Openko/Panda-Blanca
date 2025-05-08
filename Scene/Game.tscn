@@ -1,8 +1,8 @@
-[gd_scene load_steps=49 format=3 uid="uid://rg6uc0cwmrj5"]
+[gd_scene load_steps=53 format=3 uid="uid://rg6uc0cwmrj5"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_hij24"]
 [ext_resource type="PackedScene" uid="uid://c16xigal6ndq6" path="res://Scene/player.tscn" id="1_oc6gu"]
-[ext_resource type="Texture2D" uid="uid://cf4v1ml801ikm" path="res://Assets/Sprite/Panda/Ciel panda blanco.png" id="2_mctqb"]
+[ext_resource type="Texture2D" uid="uid://cvywo2ax4glgy" path="res://Assets/Sprite/Panda/Ciel panda blanco 2.png" id="2_l3qvr"]
 [ext_resource type="Texture2D" uid="uid://cn6kfrbtqojx0" path="res://Assets/Sprite/Map/Hutte_Bamboo.png" id="2_pthod"]
 [ext_resource type="PackedScene" uid="uid://b2c7naxyxi4w2" path="res://Scene/music.tscn" id="4_jqnh2"]
 [ext_resource type="Texture2D" uid="uid://bdkfkfcpjvdo4" path="res://Assets/Sprite/Map/TileMapfeur.png" id="5_1v8g1"]
@@ -42,7 +42,11 @@
 [ext_resource type="Texture2D" uid="uid://ds2eux0u4os15" path="res://Assets/Sprite/Map/Tree_1.png" id="22_dhhrw"]
 [ext_resource type="Texture2D" uid="uid://4a5q3q0geoxm" path="res://Assets/Sprite/Map/Tree_2.png" id="23_wqlny"]
 [ext_resource type="Texture2D" uid="uid://bte8b5hwnlgtb" path="res://Assets/Sprite/Map/Fleur_Violet.png" id="25_4ftwj"]
+[ext_resource type="PackedScene" uid="uid://djmyfjk6miw2w" path="res://Scene/detection.tscn" id="43_cxjyu"]
 [ext_resource type="Texture2D" uid="uid://bw27ic7wtmtv6" path="res://Assets/Sprite/Panda/FLAQUE PETROLE ILLU.png" id="43_dw58n"]
+[ext_resource type="Texture2D" uid="uid://d3oc83x4ortg8" path="res://Assets/Sprite/Panda/Panda illustration 1 Départ.png" id="44_o6mq3"]
+[ext_resource type="Texture2D" uid="uid://ps8q6d1jn737" path="res://Assets/Sprite/Map/oil.png" id="45_suefp"]
+[ext_resource type="Texture2D" uid="uid://dpyeaf65af78q" path="res://Assets/Sprite/Panda/Bambou.png" id="46_0uo8q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_il17t"]
 texture = ExtResource("5_1v8g1")
@@ -135,14 +139,10 @@ size = Vector2(325.354, 22)
 script = ExtResource("1_hij24")
 
 [node name="CielPandaBlanco2" type="Sprite2D" parent="."]
-position = Vector2(3497, 10)
-scale = Vector2(10.7067, 10.6863)
-texture = ExtResource("2_mctqb")
-
-[node name="CielPandaBlanco3" type="Sprite2D" parent="."]
-position = Vector2(16304, 4.99976)
-scale = Vector2(10.7067, 10.6956)
-texture = ExtResource("2_mctqb")
+visible = false
+position = Vector2(8299.25, -1956)
+scale = Vector2(5.41602, 5.13333)
+texture = ExtResource("2_l3qvr")
 
 [node name="Assets" type="Node2D" parent="."]
 
@@ -459,20 +459,35 @@ texture = ExtResource("7_tphn6")
 
 [node name="Pandas" type="Node2D" parent="."]
 
-[node name="GROSPANDA 1" parent="Pandas" instance=ExtResource("5_kun5b")]
+[node name="Panda entree" parent="Pandas" instance=ExtResource("5_kun5b")]
 position = Vector2(1254, -301)
 dialog_FR_1 = "[color=black]Tu te balades seul petit ? Je me doute que tu prépare quelque chose alors entre mais je t'ai à l'oeil.[/color]"
-dialog_FR_2 = "Attention de ne pas aller seul par là c'est dangereux. Enfin je crois."
-dialog_FR_3 = "Tu cherche la maman de l'ourson blanc ? Je ne sais pas pourquoi tu fais ça mais elle est passée tout à l'heure, demande aux autres pandas."
+dialog_FR_2 = "[color=black]Attention de ne pas aller seul par là c'est dangereux. Enfin je crois.[/color]"
+dialog_FR_3 = "[color=black]Tu cherche la maman de l'ourson blanc ? Je ne sais pas pourquoi tu fais ça mais elle est passée tout à l'heure, demande aux autres pandas.[/color]"
+dialog_CAT_1 = "[color=black]Estàs caminant sol, petit? Sospito que estàs fent alguna cosa, així que entra, però et vigilaré.[/color]"
+dialog_CAT_2 = "[color=black]Aneu amb compte de no anar-hi sol, és perillós. Almenys això crec.[/color]"
+dialog_CAT_3 = "[color=black]Esteu buscant la mare de l'ós blanc? No sé per què estàs fent això, però ha vingut abans, pregunta als altres pandes.[/color]"
 
-[node name="GROSPANDA" parent="Pandas" instance=ExtResource("5_kun5b")]
+[node name="Panda appeuré" parent="Pandas" instance=ExtResource("5_kun5b")]
 position = Vector2(2047, -308)
+dialog_FR_1 = "[color=black]Woaw ! Je ne sais pas pourquoi mais tu m'a fait peur, file d'ici avant que je m'énerve.[/color]"
+dialog_FR_2 = "[color=black]Bonjour petit panda ![/color]"
+dialog_FR_3 = "[color=black]L'ours blanc ? J'ai évité de lui parler, mais aller plus loin en ville.[/color]"
+dialog_CAT_1 = "[color=black]Vaja! No sé per què, però m'has fet por, surt d'aquí abans que m'enfadi.[/color]"
+dialog_CAT_2 = "[color=black]Hola petit panda![/color]"
+dialog_CAT_3 = "[color=black]L'óssa polar? Vaig evitar parlar amb ella, però va anar més enllà de la ciutat.[/color]"
 
 [node name="GROSPANDA2" parent="Pandas" instance=ExtResource("5_kun5b")]
 position = Vector2(5514, -298)
 
 [node name="GROSPANDA3" parent="Pandas" instance=ExtResource("5_kun5b")]
 position = Vector2(6477, -296)
+dialog_FR_1 = "[color=black]Ce bambou a été récolté pour les vrais pandas. Tu ne peux pas simplement te servir, débrouille toi, du bambou il y en a plein la forêt.[/color]"
+dialog_FR_2 = "[color=black]Hé petit panda ! Tu veux du bambou ?[/color]"
+dialog_FR_3 = "[color=black]L'ours blanc ? Elle est passée tout à l'heure, elle était toute paniquée quand j'ai dit que l'ourson blanc est parti en forêt.[/color]"
+dialog_CAT_1 = "[color=black]Aquest bambú es va collir per a pandes reals. No agafis el nostre bambú, aconsegueix tu mateix el teu, n'hi ha molt al bosc.[/color]"
+dialog_CAT_2 = "[color=black]Hola petit panda! Vols bambú?[/color]"
+dialog_CAT_3 = "[color=black]L'óssa polar? Va venir abans, va entrar en pànic quan li vaig dir que el seu cadell havia anat al bosc.[/color]"
 
 [node name="GROSPANDA4" parent="Pandas" instance=ExtResource("5_kun5b")]
 position = Vector2(7632, -313)
@@ -512,14 +527,29 @@ position = Vector2(-105, -1700)
 scale = Vector2(5, 5)
 zoom = Vector2(0.6, 0.6)
 
-[node name="PandaIllustration1Départ" type="Sprite2D" parent="Player"]
-visible = false
-position = Vector2(-172, -1680)
-scale = Vector2(11.0775, 11.0775)
-texture = ExtResource("43_dw58n")
-
-[node name="FlaquePetroleIllu" type="Sprite2D" parent="Player"]
+[node name="Illu1" type="Sprite2D" parent="Player"]
 visible = false
 position = Vector2(44, -1528)
 scale = Vector2(11.01, 11.01)
 texture = ExtResource("43_dw58n")
+
+[node name="Illu2" type="Sprite2D" parent="Player"]
+visible = false
+position = Vector2(-240, -1756)
+scale = Vector2(11.04, 11.04)
+texture = ExtResource("44_o6mq3")
+
+[node name="Node2D" parent="." instance=ExtResource("43_cxjyu")]
+position = Vector2(16599, -2915)
+scale = Vector2(0.25, 0.25)
+
+[node name="Oil" type="Sprite2D" parent="."]
+position = Vector2(16911, -2917)
+rotation = 0.23911
+scale = Vector2(0.921875, 0.498047)
+skew = 0.537561
+texture = ExtResource("45_suefp")
+
+[node name="Bambou" type="Sprite2D" parent="."]
+position = Vector2(16813, -3117)
+texture = ExtResource("46_0uo8q")

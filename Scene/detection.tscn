@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://djmyfjk6miw2w"]
+[gd_scene load_steps=3 format=3 uid="uid://djmyfjk6miw2w"]
+
+[ext_resource type="Script" path="res://Scene/detection.gd" id="1_ei630"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_65vwj"]
+size = Vector2(174, 825)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_ei630")
+
+[node name="detect" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detect"]
+position = Vector2(60, -402.5)
+shape = SubResource("RectangleShape2D_65vwj")
+
+[connection signal="body_entered" from="detect" to="." method="_on_detect_body_entered"]

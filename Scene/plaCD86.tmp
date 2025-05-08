@@ -1,0 +1,113 @@
+[gd_scene load_steps=17 format=3 uid="uid://c16xigal6ndq6"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_bb2y8"]
+[ext_resource type="Texture2D" uid="uid://cenkdgm0c8ja8" path="res://Assets/Sprite/Panda/White bear panda SIT 1.png" id="2_ijnvj"]
+[ext_resource type="Texture2D" uid="uid://cyvre6t7vsojm" path="res://Assets/Sprite/Panda/White bear panda SIT 2.png" id="3_dn7yw"]
+[ext_resource type="Texture2D" uid="uid://dxaymteeofsnx" path="res://Assets/Sprite/Panda/White bear panda run FRAME 4.png" id="4_eglpm"]
+[ext_resource type="Texture2D" uid="uid://csklrchrh0ooq" path="res://Assets/Sprite/Panda/White bear panda SIT 1 TACHE.png" id="4_qharb"]
+[ext_resource type="Texture2D" uid="uid://btn8tqx8ma6id" path="res://Assets/Sprite/Panda/White bear panda run FRAME 1.png" id="5_dkr4i"]
+[ext_resource type="Texture2D" uid="uid://epj8njye5qba" path="res://Assets/Sprite/Panda/White bear panda SIT 2 SOL.png" id="5_qf3ca"]
+[ext_resource type="Texture2D" uid="uid://cf88f3kmuwwxc" path="res://Assets/Sprite/Panda/White bear panda run FRAME 2.png" id="6_fxagy"]
+[ext_resource type="Texture2D" uid="uid://dflrid822tbvc" path="res://Assets/Sprite/Panda/White bear panda run FRAME 3.png" id="7_rsxe1"]
+[ext_resource type="Texture2D" uid="uid://cf4v1ml801ikm" path="res://Assets/Sprite/Panda/Ciel panda blanco.png" id="8_klfhx"]
+[ext_resource type="Texture2D" uid="uid://dg3crauvfc3bk" path="res://Assets/Sprite/Panda/White & black bear panda run frame 1.png" id="10_hrhed"]
+[ext_resource type="Texture2D" uid="uid://dmvo06errqeca" path="res://Assets/Sprite/Panda/White & Black panda frame 2 bear panda run.png" id="11_ac7o8"]
+[ext_resource type="Texture2D" uid="uid://224s60edywht" path="res://Assets/Sprite/Panda/White & black panda frame 4 bear panda run.png" id="12_sblko"]
+[ext_resource type="Texture2D" uid="uid://c6cu37xrg523w" path="res://Assets/Sprite/Panda/White & black bear panda run frame3.png" id="13_isq8f"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dijhb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ijnvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dn7yw")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_qharb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qf3ca")
+}],
+"loop": true,
+"name": &"Idle2",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_eglpm")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 1.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Jump2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_dkr4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fxagy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rsxe1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eglpm")
+}],
+"loop": true,
+"name": &"Move",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_hrhed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ac7o8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_sblko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_isq8f")
+}],
+"loop": true,
+"name": &"Move2",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sqj24"]
+radius = 120.017
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_bb2y8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -142)
+sprite_frames = SubResource("SpriteFrames_dijhb")
+animation = &"Move2"
+autoplay = "Idle"
+frame_progress = 0.52251
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18, -132)
+shape = SubResource("CircleShape2D_sqj24")
+
+[node name="CielPandaBlanco" type="Sprite2D" parent="."]
+visible = false
+z_index = -1
+position = Vector2(-20, -1695.3)
+scale = Vector2(12.25, 10.5007)
+texture = ExtResource("8_klfhx")
