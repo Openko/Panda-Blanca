@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2c7naxyxi4w2"]
+[gd_scene load_steps=3 format=3 uid="uid://b2c7naxyxi4w2"]
 
 [ext_resource type="AudioStream" uid="uid://bqqoamjycumpe" path="res://Assets/Music/Jungle.wav" id="1_njhvx"]
+[ext_resource type="AudioStream" uid="uid://cp3yockvsisu4" path="res://Assets/Music/Panda Village.wav" id="2_f53k7"]
 
 [node name="Music" type="Node"]
 
 [node name="Jungle" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_njhvx")
+
+[node name="Village" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_f53k7")

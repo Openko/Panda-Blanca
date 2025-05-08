@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://rg6uc0cwmrj5"]
+[gd_scene load_steps=30 format=3 uid="uid://rg6uc0cwmrj5"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_hij24"]
 [ext_resource type="PackedScene" uid="uid://c16xigal6ndq6" path="res://Scene/player.tscn" id="1_oc6gu"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://c7wo56hn38wmw" path="res://Assets/Sprite/Map/WF/3.png" id="19_rk73g"]
 [ext_resource type="Texture2D" uid="uid://ckg1u1yjo5hyi" path="res://Assets/Sprite/Map/WF/2.png" id="20_ka8lo"]
 [ext_resource type="Texture2D" uid="uid://4wh6gcwbbxgy" path="res://Assets/Sprite/Map/WF/1.png" id="21_cucbi"]
+[ext_resource type="Script" path="res://Scripts/music.gd" id="22_aqiva"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_il17t"]
 texture = ExtResource("5_1v8g1")
@@ -110,6 +111,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eof2h"]
 size = Vector2(325.354, 22)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vmyg"]
+size = Vector2(9811, 2444)
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_hij24")
 
@@ -157,8 +161,6 @@ position = Vector2(6477, -296)
 [node name="GROSPANDA4" parent="Pandas" instance=ExtResource("5_kun5b")]
 position = Vector2(7632, -313)
 
-[node name="Music" parent="." instance=ExtResource("4_jqnh2")]
-
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(0.2, 0.2)
 tile_set = SubResource("TileSet_wfbi1")
@@ -183,7 +185,8 @@ texture = ExtResource("6_mhbva")
 position = Vector2(2.55762, 241)
 shape = SubResource("RectangleShape2D_eof2h")
 
-[node name="Player" parent="." instance=ExtResource("1_oc6gu")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_oc6gu")]
+unique_name_in_owner = true
 position = Vector2(12736, -1973)
 scale = Vector2(0.25, 0.25)
 
@@ -191,3 +194,15 @@ scale = Vector2(0.25, 0.25)
 position = Vector2(-105, -1700)
 scale = Vector2(5, 5)
 zoom = Vector2(0.6, 0.6)
+
+[node name="Music_Area" type="Node2D" parent="."]
+script = ExtResource("22_aqiva")
+
+[node name="Music" parent="Music_Area" instance=ExtResource("4_jqnh2")]
+unique_name_in_owner = true
+
+[node name="Area2D" type="Area2D" parent="Music_Area"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Music_Area/Area2D"]
+position = Vector2(2941.5, -1220)
+shape = SubResource("RectangleShape2D_8vmyg")

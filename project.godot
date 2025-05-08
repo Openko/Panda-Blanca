@@ -23,6 +23,10 @@ Langue="*res://langue.gd"
 
 window/size/mode=3
 
+[global_group]
+
+Player=""
+
 [input]
 
 Jump={
