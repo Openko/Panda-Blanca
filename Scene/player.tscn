@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c16xigal6ndq6"]
+[gd_scene load_steps=11 format=3 uid="uid://c16xigal6ndq6"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_bb2y8"]
 [ext_resource type="Texture2D" uid="uid://cenkdgm0c8ja8" path="res://Assets/Sprite/Panda/White bear panda SIT 1.png" id="2_ijnvj"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://btn8tqx8ma6id" path="res://Assets/Sprite/Panda/White bear panda run FRAME 1.png" id="5_dkr4i"]
 [ext_resource type="Texture2D" uid="uid://cf88f3kmuwwxc" path="res://Assets/Sprite/Panda/White bear panda run FRAME 2.png" id="6_fxagy"]
 [ext_resource type="Texture2D" uid="uid://dflrid822tbvc" path="res://Assets/Sprite/Panda/White bear panda run FRAME 3.png" id="7_rsxe1"]
+[ext_resource type="Texture2D" uid="uid://cf4v1ml801ikm" path="res://Assets/Sprite/Panda/Ciel panda blanco.png" id="8_klfhx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dijhb"]
 animations = [{
@@ -64,3 +65,10 @@ frame_progress = 0.546498
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(18, -132)
 shape = SubResource("CircleShape2D_sqj24")
+
+[node name="CielPandaBlanco" type="Sprite2D" parent="."]
+visible = false
+z_index = -1
+position = Vector2(-20, -1695.3)
+scale = Vector2(12.25, 10.5007)
+texture = ExtResource("8_klfhx")

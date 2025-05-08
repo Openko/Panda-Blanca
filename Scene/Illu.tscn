@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://6lcbts2q5xtc"]
+
+[ext_resource type="Texture2D" uid="uid://d3oc83x4ortg8" path="res://Assets/Sprite/Panda/Panda illustration 1 Départ.png" id="1_dahlk"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="PandaIllustration1Départ" type="Sprite2D" parent="."]
+position = Vector2(959, 576)
+scale = Vector2(1.59875, 1.59875)
+texture = ExtResource("1_dahlk")

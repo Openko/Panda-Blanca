@@ -21,6 +21,8 @@ func _on_chat_detection_area_body_entered(body):
 func _on_chat_detection_area_body_exited(body):
 	if body.get_name() == "Player":
 		is_player_in_range = false
+		print("exited")
+		$DialogBox.visible = false
 	pass # Replace with function body.
 
 func _ready():
